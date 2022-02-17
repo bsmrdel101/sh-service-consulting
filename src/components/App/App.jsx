@@ -13,6 +13,7 @@ import Footer from '../Footer/Footer';
 
 import AboutPage from '../AboutPage/AboutPage';
 import HomePage from '../HomePage/HomePage';
+import ContactPage from '../ContactPage/ContactPage';
 
 import './App.css';
 
@@ -49,9 +50,18 @@ function App() {
             <HomePage />
           </Route>
 
+          <Route
+            exact
+            path="/contact"
+          >
+            <ContactPage />
+          </Route>
+
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
-            <h1>404</h1>
+            <div className='container'>
+              <h1>404</h1>
+            </div>
           </Route>
         </Switch>
         <Footer />

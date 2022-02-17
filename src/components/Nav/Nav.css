@@ -17,3 +17,7 @@
 .active-tab {
   border-bottom: 2px solid orange;
 }
+
+.nav-link:hover {
+  transform: scale(1.05, 1.05);
+}
