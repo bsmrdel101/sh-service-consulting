@@ -1,3 +1,7 @@
 .header {
-    margin-top: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: url('../../../public/header.jpeg') center;
+    color: white;
+    border-bottom: 3px solid orange;
 }
