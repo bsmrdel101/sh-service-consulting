@@ -1,7 +1,15 @@
 .header {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    background: url('../../../public/header.jpeg') center;
-    color: white;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background:     linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), 
+      url('../../../public/header.jpeg') center;
+    color: rgb(255, 255, 255);
     border-bottom: 3px solid orange;
+}
+
+.header-title {
+    text-shadow: 1px 1px #00000088;
 }
