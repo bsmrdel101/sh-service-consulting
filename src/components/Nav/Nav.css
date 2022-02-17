@@ -3,3 +3,13 @@
   justify-content: end;
   margin-left: 75%;
 }
+
+#sh-logo {
+  color: orange;
+  font-size: 34px;
+  padding-right: 3px;
+}
+
+.navbar-brand {
+  font-size: 25px;
+}
