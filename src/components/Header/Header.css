@@ -9,6 +9,7 @@
     color: rgb(255, 255, 255);
     border-bottom: 3px solid orange;
     background-attachment: fixed;
+    width: 100%;
 }
 
 .header-title {
