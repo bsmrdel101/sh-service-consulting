@@ -13,3 +13,7 @@
 .navbar-brand {
   font-size: 25px;
 }
+
+.active-tab {
+  border-bottom: 2px solid orange;
+}

@@ -2,25 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../bootstrap-5.1.3-dist/js/bootstrap.js';
 import '../../bootstrap-5.1.3-dist/css/bootstrap.css';
+import { useState } from 'react';
+
 import './Nav.css';
 
 function Nav() {
+  const [homeActive, setHomeActive] = useState(true);
+  const [aboutActive, setAboutActive] = useState(false);
+
+  const handleSelectHome = () => {
+    setAboutActive(false);
+    setHomeActive(true);
+  }
+
+  const handleSelectAbout = () => {
+    setAboutActive(true);
+    setHomeActive(false);
+  }
 
   return (
-    // <div className="nav">
-    //   <Link to="/home">
-    //     <h2 className="nav-title"><span>SH</span> Compliance & Service Consulting</h2>
-    //   </Link>
-    //   <div>
-    //     <Link className="navLink" to="/home">
-    //       Home
-    //     </Link>
-
-        // <Link className="navLink" to="/about">
-        //   About
-        // </Link>
-    //   </div>
-    // </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><span id='sh-logo'>SH</span> Compliance & Service Consulting</a>
@@ -29,12 +29,16 @@ function Nav() {
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-container">
-            <Link className="nav-link" to="/home">
-              Home
-            </Link>
-            <Link className="nav-link" to="/about">
-              About
-            </Link>
+            {homeActive ? 
+              <Link className="nav-link active-tab" to="/home">Home</Link> 
+            : 
+              <Link className="nav-link" to="/home" onClick={handleSelectHome}>Home</Link>
+            }
+            {aboutActive ?
+              <Link className="nav-link active-tab" to="/about">About</Link>
+            :
+              <Link className="nav-link" to="/about" onClick={handleSelectAbout}>About</Link>
+            }
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown
