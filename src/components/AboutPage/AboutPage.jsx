@@ -1,5 +1,5 @@
 import React from 'react';
-import CompanyServices from '../CompanyServices/CompanyServices';
+import About from '../About/About';
 
 // This is one of our simplest components
 // It doesn't have local state,
@@ -9,8 +9,7 @@ import CompanyServices from '../CompanyServices/CompanyServices';
 function AboutPage() {
   return (
     <div className="container">
-      <h1>About us</h1>
-      <CompanyServices />
+      <About />
     </div>
   );
 }
