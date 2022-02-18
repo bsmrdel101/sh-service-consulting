@@ -19,19 +19,6 @@ function ScheduleForm() {
             phone: phone,
             description: description
         }
-        // Email.send({
-        //     SecureToken : "97a67323-22e3-40ce-a050-9dda11c5c27d",
-        //     To : 'smrdelb@gmail.com',
-        //     From : "smrdelb@gmail.com",
-        //     Subject : "Scheduled a consultation",
-        //     Body : `${name} has just applied to schedule a meeting with you! |
-        //     Email: ${email} | 
-        //     Phone: ${phone} | 
-        //     Reason for Meeting: ${description}
-        //     `
-        // }).then(
-        //   message => alert("mail has been sent successfully")
-        // );
         emailjs.send('service_evx9vw1', 'template_fv5c4ee', emailParams)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
