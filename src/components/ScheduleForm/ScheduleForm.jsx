@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import{ init } from '@emailjs/browser';
+init("user_DvzluUOonFH13wInZ1rTp");
 
 import './ScheduleForm.css';
 
@@ -11,19 +13,31 @@ function ScheduleForm() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        Email.send({
-            SecureToken : "14a07bcf-1e62-4a6d-96da-5b2ec0af9658",
-            To : 'smrdelb@gmail.com',
-            From : "fireknights318@gmail.com",
-            Subject : "Scheduled a consultation",
-            Body : `${name} has just applied to schedule a meeting with you!\n\
-            email: ${email}\n\
-            phone: ${phone}\n\
-            reason for meeting: ${description}
-            `
-        }).then(
-          message => alert("mail has been sent successfully")
-        );
+        let emailParams = {
+            name: name,
+            email: email,
+            phone: phone,
+            description: description
+        }
+        // Email.send({
+        //     SecureToken : "97a67323-22e3-40ce-a050-9dda11c5c27d",
+        //     To : 'smrdelb@gmail.com',
+        //     From : "smrdelb@gmail.com",
+        //     Subject : "Scheduled a consultation",
+        //     Body : `${name} has just applied to schedule a meeting with you! |
+        //     Email: ${email} | 
+        //     Phone: ${phone} | 
+        //     Reason for Meeting: ${description}
+        //     `
+        // }).then(
+        //   message => alert("mail has been sent successfully")
+        // );
+        emailjs.send('service_evx9vw1', 'template_fv5c4ee', emailParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+        });
         setName('');
         setEmail('');
         setPhone('');
