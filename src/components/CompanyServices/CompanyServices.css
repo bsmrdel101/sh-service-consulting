@@ -5,4 +5,11 @@
 .services-row {
     margin-top: 60px;
     display: flex;
+    flex-wrap: wrap;
+}
+
+.dark-container {
+    background-color: rgb(226, 226, 226);
+    padding-top: 1px;
+    padding-bottom: 70px;
 }

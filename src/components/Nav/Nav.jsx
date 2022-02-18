@@ -30,7 +30,6 @@ function Nav() {
   }
 
   window.addEventListener('scroll', function(ev) {
-    console.log('window', window.scrollY);
     if (window.scrollY >= 420) {
       document.getElementById("navbar").classList.add("sticky-top");
     }
