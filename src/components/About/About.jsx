@@ -15,7 +15,7 @@ function About() {
                     excellence, integrity, and always trying to give the best performance for our clients. 
                     We will maintain regulatory expertise to ensure our service takes your business where it needs to be.
 
-                    We can do our service in english or spanish.
+                    We can do our service in English or Spanish.
                 </p>
             </div>
         </>
