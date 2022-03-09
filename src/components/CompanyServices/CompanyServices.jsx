@@ -9,13 +9,17 @@ function CompanyServices() {
                 <h1 className='services-title'>Services</h1>
                 <div class="services-row">
                     <div class="col-lg-4">
-                        <img src='advancement.jpeg' height="200px" />
+                        <center><img src='advancement.jpeg' height="200px" /></center>
                 
                         <h2>Quality Management Systems (QMS)</h2>
-                        <p>We can collaborate with you to develop, implement, and maintain your Quality Management System for compliance to global regulatory requirements.</p>    
+                        <ul>
+                            <li>We can collaborate with you to develop, implement, and maintain your Quality Management System for compliance to global regulatory requirements.</li>
+                            <li>Quality System Development and Creation of Applicable Procedures</li>
+                        </ul>
+                        <button className='services-btn'>See Requirements for Quality System Auditing</button>
                     </div>
                     <div class="col-lg-4">
-                        <img src='safety.jpeg' height="200px" />
+                        <center><img src='safety.jpeg' height="200px" /></center>
                 
                         <h2>Regulatory Affairs</h2>
                         <ul>
@@ -25,7 +29,7 @@ function CompanyServices() {
                         </ul>
                     </div>
                     <div class="col-lg-4">
-                        <img src='quality.jpeg' height="200px" />
+                        <center><img src='quality.jpeg' height="200px" /></center>
                 
                         <h2>Quality Assurance</h2>
                         <ul>
