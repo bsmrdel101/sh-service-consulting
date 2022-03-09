@@ -31,7 +31,3 @@
     transform: scale(1.02, 1.02);
     box-shadow: 0 6px 3px -2px rgba(61, 100, 185, 0.301);
 }
-
-.services-btn:focus {
-    background-color: rgb(86, 132, 231);
-}

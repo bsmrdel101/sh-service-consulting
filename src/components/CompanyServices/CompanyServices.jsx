@@ -17,7 +17,7 @@ function CompanyServices() {
                             <li>Quality System Development and Creation of Applicable Procedures</li>
                         </ul>
                         <center>
-                            <button className='services-btn'>See Requirements for Quality System Auditing</button>
+                            <button className='services-btn'>Show Requirements for Quality System Auditing</button>
                         </center>
                     </div>
                     <div class="col-lg-4">
