@@ -11,7 +11,7 @@ function CompanyServices() {
                     <div class="col-lg-4">
                         <img src='advancement.jpeg' height="200px" />
                 
-                        <h2>Future Advancement</h2>
+                        <h2>Quality Management Systems (QMS)</h2>
                         <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
                     </div>
                     <div class="col-lg-4">

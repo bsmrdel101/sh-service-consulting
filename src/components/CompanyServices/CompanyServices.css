@@ -9,3 +9,7 @@
     flex-wrap: wrap;
     font-size: var(--smaller-font-size);
 }
+
+.services-row h2 {
+    font-size: 27px;
+}
