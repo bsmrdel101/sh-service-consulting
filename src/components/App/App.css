@@ -4,6 +4,8 @@ body,
   height: 100%;
   --body-font-size: 20px;
   --smaller-font-size: 17px;
+  --blue-btn: rgb(61, 100, 185);
+  --blue-btn-hover: rgb(72, 115, 207);
 }
 
 body {
