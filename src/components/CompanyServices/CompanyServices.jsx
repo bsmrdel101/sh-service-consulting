@@ -16,7 +16,9 @@ function CompanyServices() {
                             <li>We can collaborate with you to develop, implement, and maintain your Quality Management System for compliance to global regulatory requirements.</li>
                             <li>Quality System Development and Creation of Applicable Procedures</li>
                         </ul>
-                        <button className='services-btn'>See Requirements for Quality System Auditing</button>
+                        <center>
+                            <button className='services-btn'>See Requirements for Quality System Auditing</button>
+                        </center>
                     </div>
                     <div class="col-lg-4">
                         <center><img src='safety.jpeg' height="200px" /></center>
