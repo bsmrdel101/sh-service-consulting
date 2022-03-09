@@ -8,8 +8,10 @@
     display: flex;
     flex-wrap: wrap;
     font-size: var(--smaller-font-size);
+    text-align: start;
 }
 
 .services-row h2 {
     font-size: 27px;
+    text-align: center;
 }
