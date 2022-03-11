@@ -8,7 +8,9 @@ function HomePage() {
     return (
         <>
             <Header />
-            <CompanyServices />
+            <section id='section-one'>
+                <CompanyServices />
+            </section>
             <section className='about-container'>
                 <About />
             </section>

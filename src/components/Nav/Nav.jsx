@@ -11,6 +11,13 @@ function Nav() {
   const [aboutActive, setAboutActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
 
+  const servicesView = () => {
+    let element = document.getElementById("section-one"); 
+    console.log(element);
+
+    element.scrollIntoView();
+  }
+
   const handleSelectHome = () => {
     setAboutActive(false);
     setHomeActive(true);
@@ -48,9 +55,9 @@ function Nav() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-container">
               {homeActive ? 
-                <Link className="nav-link active-tab" to="/home" draggable={false}>Our Services</Link> 
+                <Link className="nav-link active-tab" to='/home' draggable={false}>Our Services</Link> 
               : 
-                <Link className="nav-link" to="/home" onClick={handleSelectHome} draggable={false}>Our Services</Link>
+                <Link className="nav-link" to='/home' onClick={handleSelectHome} draggable={false}>Our Services</Link>
               }
               {aboutActive ?
                 <Link className="nav-link active-tab" to="/about" draggable={false}>About</Link>
