@@ -8,34 +8,50 @@ import './Nav.css';
 
 function Nav() {
   const [homeActive, setHomeActive] = useState(true);
+  const [servicesActive, setServicesActive] = useState(false);
   const [aboutActive, setAboutActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
 
-  const servicesView = () => {
-    let element = document.getElementById("section-one"); 
+  // const servicesView = () => {
+  //   let element = document.getElementById("section-one"); 
 
-    element.scrollIntoView();
-  }
+  //   element.scrollIntoView();
+  // }
 
   const handleSelectHome = () => {
     setAboutActive(false);
     setHomeActive(true);
     setContactActive(false);
+    setServicesActive(false);
+
+    window.scrollTo(0, 0);
+  }
+
+  const handleSelectServices = () => {
+    setAboutActive(false);
+    setHomeActive(false);
+    setContactActive(false);
+    setServicesActive(true);
+
+    window.scrollTo(0, 470);
   }
 
   const handleSelectAbout = () => {
     setAboutActive(true);
     setHomeActive(false);
     setContactActive(false);
+    setServicesActive(false);
   }
 
   const handleSelectContact = () => {
     setAboutActive(false);
     setHomeActive(false);
     setContactActive(true);
+    setServicesActive(false);
   }
 
   window.addEventListener('scroll', function(ev) {
+    console.log(window.scrollY);
     if (window.scrollY >= 420) {
       document.getElementById("navbar").classList.add("sticky-top");
     }
@@ -54,10 +70,14 @@ function Nav() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-container">
               {homeActive ? 
-                // <Link className="nav-link active-tab" to='/home' draggable={false}>Our Services</Link> 
-                <a onClick={servicesView}>Services</a>
+                <Link className="nav-link active-tab" onClick={handleSelectHome} draggable={false}>Home</Link> 
               : 
-                <Link className="nav-link" to='/home' onClick={handleSelectHome} draggable={false}>Our Services</Link>
+                <Link className="nav-link" onClick={handleSelectHome} draggable={false}>Home</Link>
+              }
+              {servicesActive ? 
+                <Link className="nav-link active-tab" draggable={false}>Services</Link> 
+              : 
+                <Link className="nav-link" onClick={handleSelectServices} draggable={false}>Services</Link>
               }
               {aboutActive ?
                 <Link className="nav-link active-tab" to="/about" draggable={false}>About</Link>
