@@ -13,7 +13,6 @@ function Nav() {
 
   const servicesView = () => {
     let element = document.getElementById("section-one"); 
-    console.log(element);
 
     element.scrollIntoView();
   }
@@ -55,7 +54,8 @@ function Nav() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-container">
               {homeActive ? 
-                <Link className="nav-link active-tab" to='/home' draggable={false}>Our Services</Link> 
+                // <Link className="nav-link active-tab" to='/home' draggable={false}>Our Services</Link> 
+                <a onClick={servicesView}>Services</a>
               : 
                 <Link className="nav-link" to='/home' onClick={handleSelectHome} draggable={false}>Our Services</Link>
               }
