@@ -12,12 +12,6 @@ function Nav() {
   const [aboutActive, setAboutActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
 
-  // const servicesView = () => {
-  //   let element = document.getElementById("section-one"); 
-
-  //   element.scrollIntoView();
-  // }
-
   const handleSelectHome = () => {
     setAboutActive(false);
     setHomeActive(true);
@@ -41,6 +35,8 @@ function Nav() {
     setHomeActive(false);
     setContactActive(false);
     setServicesActive(false);
+
+    window.scrollTo(0, 1240);
   }
 
   const handleSelectContact = () => {
@@ -48,6 +44,8 @@ function Nav() {
     setHomeActive(false);
     setContactActive(true);
     setServicesActive(false);
+
+    window.scrollTo(0, 1240);
   }
 
   window.addEventListener('scroll', function(ev) {
@@ -80,14 +78,21 @@ function Nav() {
                 <Link className="nav-link" onClick={handleSelectServices} draggable={false}>Services</Link>
               }
               {aboutActive ?
-                <Link className="nav-link active-tab" to="/about" draggable={false}>About</Link>
+                <Link className="nav-link active-tab" onClick={handleSelectAbout} draggable={false}>About</Link>
               :
-                <Link className="nav-link" to="/about" onClick={handleSelectAbout} draggable={false}>About</Link>
+                <Link className="nav-link" onClick={handleSelectAbout} draggable={false}>About</Link>
               }
+              {/* TODO: */}
+              {/* Make contact section */}
+
+              {/* Make contact dropdown nav with "contact info" and "schedule a consultation" as the options.
+                If the user just clicks on the nav element itself instead of a dropdown element, bring them to the
+                "contact info". 
+              */}
               {contactActive ?
-                <Link className="nav-link active-tab" to="/contact" draggable={false}>Contact</Link>
+                <Link className="nav-link active-tab" onClick={handleSelectContact} draggable={false}>Contact</Link>
               :
-                <Link className="nav-link" to="/contact" onClick={handleSelectContact} draggable={false}>Contact</Link>
+                <Link className="nav-link" onClick={handleSelectContact} draggable={false}>Contact</Link>
               }
             </ul>
           </div>
