@@ -36,7 +36,7 @@ function Nav() {
     setContactActive(false);
     setServicesActive(false);
 
-    window.scrollTo(0, 1240);
+    window.scrollTo(0, 1150);
   }
 
   const handleSelectContact = () => {
