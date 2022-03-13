@@ -8,6 +8,7 @@ import './Nav.css';
 
 function Nav() {
   const [homeActive, setHomeActive] = useState(true);
+  const [servicesActive, setServicesActive] = useState(false);
   const [aboutActive, setAboutActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
 
@@ -15,21 +16,40 @@ function Nav() {
     setAboutActive(false);
     setHomeActive(true);
     setContactActive(false);
+    setServicesActive(false);
+
+    window.scrollTo(0, 0);
+  }
+
+  const handleSelectServices = () => {
+    setAboutActive(false);
+    setHomeActive(false);
+    setContactActive(false);
+    setServicesActive(true);
+
+    window.scrollTo(0, 470);
   }
 
   const handleSelectAbout = () => {
     setAboutActive(true);
     setHomeActive(false);
     setContactActive(false);
+    setServicesActive(false);
+
+    window.scrollTo(0, 1150);
   }
 
   const handleSelectContact = () => {
     setAboutActive(false);
     setHomeActive(false);
     setContactActive(true);
+    setServicesActive(false);
+
+    window.scrollTo(0, 1240);
   }
 
   window.addEventListener('scroll', function(ev) {
+    console.log(window.scrollY);
     if (window.scrollY >= 420) {
       document.getElementById("navbar").classList.add("sticky-top");
     }
@@ -48,19 +68,31 @@ function Nav() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-container">
               {homeActive ? 
-                <Link className="nav-link active-tab" to="/home" draggable={false}>Our Services</Link> 
+                <Link className="nav-link active-tab" onClick={handleSelectHome} draggable={false}>Home</Link> 
               : 
-                <Link className="nav-link" to="/home" onClick={handleSelectHome} draggable={false}>Our Services</Link>
+                <Link className="nav-link" onClick={handleSelectHome} draggable={false}>Home</Link>
+              }
+              {servicesActive ? 
+                <Link className="nav-link active-tab" draggable={false}>Services</Link> 
+              : 
+                <Link className="nav-link" onClick={handleSelectServices} draggable={false}>Services</Link>
               }
               {aboutActive ?
-                <Link className="nav-link active-tab" to="/about" draggable={false}>About</Link>
+                <Link className="nav-link active-tab" onClick={handleSelectAbout} draggable={false}>About</Link>
               :
-                <Link className="nav-link" to="/about" onClick={handleSelectAbout} draggable={false}>About</Link>
+                <Link className="nav-link" onClick={handleSelectAbout} draggable={false}>About</Link>
               }
+              {/* TODO: */}
+              {/* Make contact section */}
+
+              {/* Make contact dropdown nav with "contact info" and "schedule a consultation" as the options.
+                If the user just clicks on the nav element itself instead of a dropdown element, bring them to the
+                "contact info". 
+              */}
               {contactActive ?
-                <Link className="nav-link active-tab" to="/contact" draggable={false}>Contact</Link>
+                <Link className="nav-link active-tab" onClick={handleSelectContact} draggable={false}>Contact</Link>
               :
-                <Link className="nav-link" to="/contact" onClick={handleSelectContact} draggable={false}>Contact</Link>
+                <Link className="nav-link" onClick={handleSelectContact} draggable={false}>Contact</Link>
               }
             </ul>
           </div>
