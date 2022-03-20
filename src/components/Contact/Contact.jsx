@@ -11,6 +11,7 @@ function ScheduleForm() {
                 <h5>(651)-964-5235</h5>
             </div>
             <p>SHcomplianceconsulting@gmail.com</p>
+            <img src='linkedin.png' className='contact-icon' />
         </center>
     );
 }
