@@ -5,7 +5,8 @@ import './Contact.css';
 function ScheduleForm() {
     return (
         <center>
-
+            <h1>Contact</h1>
+            
         </center>
     );
 }
