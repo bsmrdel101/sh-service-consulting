@@ -10,6 +10,7 @@ function Nav() {
   const [homeActive, setHomeActive] = useState(true);
   const [servicesActive, setServicesActive] = useState(false);
   const [aboutActive, setAboutActive] = useState(false);
+  const [scheduleActive, setScheduleActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
 
   const handleSelectHome = () => {
@@ -17,6 +18,7 @@ function Nav() {
     setHomeActive(true);
     setContactActive(false);
     setServicesActive(false);
+    setScheduleActive(false);
 
     window.scrollTo(0, 0);
   }
@@ -26,6 +28,7 @@ function Nav() {
     setHomeActive(false);
     setContactActive(false);
     setServicesActive(true);
+    setScheduleActive(false);
 
     window.scrollTo(0, 470);
   }
@@ -35,8 +38,19 @@ function Nav() {
     setHomeActive(false);
     setContactActive(false);
     setServicesActive(false);
+    setScheduleActive(false);
 
     window.scrollTo(0, 1150);
+  }
+
+  const handleSelectSchedule = () => {
+    setAboutActive(false);
+    setHomeActive(false);
+    setContactActive(false);
+    setServicesActive(false);
+    setScheduleActive(true);
+
+    window.scrollTo(0, 1200);
   }
 
   const handleSelectContact = () => {
@@ -44,8 +58,9 @@ function Nav() {
     setHomeActive(false);
     setContactActive(true);
     setServicesActive(false);
+    setScheduleActive(false);
 
-    window.scrollTo(0, 1240);
+    window.scrollTo(0, 2000);
   }
 
   window.addEventListener('scroll', function(ev) {
@@ -82,8 +97,11 @@ function Nav() {
               :
                 <Link className="nav-link" onClick={handleSelectAbout} draggable={false}>About</Link>
               }
-              {/* TODO: */}
-              {/* Make contact section */}
+              {scheduleActive ?
+                <Link className="nav-link active-tab" onClick={handleSelectSchedule} draggable={false}>Schedule</Link>
+              :
+                <Link className="nav-link" onClick={handleSelectSchedule} draggable={false}>Schedule</Link>
+              }
 
               {/* Make contact dropdown nav with "contact info" and "schedule a consultation" as the options.
                 If the user just clicks on the nav element itself instead of a dropdown element, bring them to the
