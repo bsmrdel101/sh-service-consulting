@@ -35,13 +35,13 @@ function App() {
           <Redirect exact from="/" to="/home" />
 
           {/* Visiting localhost:3000/about will show the about page. */}
-          <Route
+          {/* <Route
             // shows AboutPage at all times (logged in or not)
             exact
             path="/about"
           >
             <AboutPage />
-          </Route>
+          </Route> */}
 
           <Route
             exact
@@ -50,12 +50,12 @@ function App() {
             <HomePage />
           </Route>
 
-          <Route
+          {/* <Route
             exact
             path="/contact"
           >
             <ContactPage />
-          </Route>
+          </Route> */}
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>

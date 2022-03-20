@@ -50,7 +50,7 @@ function Nav() {
     setServicesActive(false);
     setScheduleActive(true);
 
-    window.scrollTo(0, 1200);
+    window.scrollTo(0, 1500);
   }
 
   const handleSelectContact = () => {
