@@ -1,0 +1,23 @@
+.contact-container {
+    margin-top: 85px;
+    padding-top: 1px;
+    padding-bottom: 35px;
+    background-color: rgb(238, 238, 238);
+}
+
+.contact-icon {
+    width: 45px;
+    border-radius: 15px;
+    box-shadow: 0 6px 3px -2px rgba(0, 0, 0, 0.301);
+    transition: ease 0.3s;
+}
+
+.contact-icon:hover {
+    cursor: pointer;
+    transform: scale(1.08, 1.08);
+    box-shadow: 0 6px 3px -2px rgba(61, 100, 185, 0.301);
+}
+
+.contact-name {
+    font-size: 26px;
+}

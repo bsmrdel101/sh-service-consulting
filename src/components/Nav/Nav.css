@@ -1,7 +1,5 @@
 .nav-container {
-  display: flex;
-  justify-content: end;
-  margin-left: 70%;
+  padding-left: 62%;
 }
 
 #sh-logo {
