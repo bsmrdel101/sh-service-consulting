@@ -91,34 +91,49 @@ function Nav() {
   }
 
   window.addEventListener('scroll', function(ev) {
+    let scroll = window.scrollY;
     // Removes or adds the sticky-top class, depending on scroll distance
-    if (window.scrollY >= 420) {
+    if (scroll >= 420) {
       document.getElementById("navbar").classList.add("sticky-top");
     }
-    if (window.scrollY <= 400) {
+    if (scroll <= 400) {
       document.getElementById("navbar").classList.remove("sticky-top");
     }
 
     // Switches which nav element is active
-    switch (window.scrollY) {
-      case 0:
-        getActiveNav("home");
-        break;
-      case 470:
-        getActiveNav("services");
-        break;
-      case 1150:
-        getActiveNav("about");
-        break;
-      case 1500:
-        getActiveNav("schedule");
-        break;
-      case 2000:
-        getActiveNav("contact");
-        break;
-      default:
-        break;
+    if (scroll <= 400) {
+      setHomeActive(true);
+      setServicesActive(false);
+      setAboutActive(false);
+      setScheduleActive(false);
+      setContactActive(false);
+    } else if (scroll > 400 && scroll < 470) {
+      setHomeActive(false);
+      setServicesActive(true);
+      setAboutActive(false);
+      setScheduleActive(false);
+      setContactActive(false);
     }
+
+    // switch (scroll) {
+    //   case 0:
+    //     getActiveNav("home");
+    //     break;
+    //   case 470:
+    //     getActiveNav("services");
+    //     break;
+    //   case 1150:
+    //     getActiveNav("about");
+    //     break;
+    //   case 1500:
+    //     getActiveNav("schedule");
+    //     break;
+    //   case 2000:
+    //     getActiveNav("contact");
+    //     break;
+    //   default:
+    //     break;
+    // }
   });
 
   return (
