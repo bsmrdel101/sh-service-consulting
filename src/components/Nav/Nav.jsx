@@ -14,67 +14,71 @@ function Nav() {
   const [contactActive, setContactActive] = useState(false);
 
   const handleSelectHome = () => {
-    setAboutActive(false);
-    setHomeActive(true);
-    setContactActive(false);
-    setServicesActive(false);
-    setScheduleActive(false);
-
     window.scrollTo(0, 0);
   }
 
   const handleSelectServices = () => {
-    setAboutActive(false);
-    setHomeActive(false);
-    setContactActive(false);
-    setServicesActive(true);
-    setScheduleActive(false);
-
     window.scrollTo(0, 470);
   }
 
   const handleSelectAbout = () => {
-    setAboutActive(true);
-    setHomeActive(false);
-    setContactActive(false);
-    setServicesActive(false);
-    setScheduleActive(false);
-
     window.scrollTo(0, 1150);
   }
 
   const handleSelectSchedule = () => {
-    setAboutActive(false);
-    setHomeActive(false);
-    setContactActive(false);
-    setServicesActive(false);
-    setScheduleActive(true);
-
     window.scrollTo(0, 1500);
   }
 
   const handleSelectContact = () => {
-    setAboutActive(false);
-    setHomeActive(false);
-    setContactActive(true);
-    setServicesActive(false);
-    setScheduleActive(false);
-
     window.scrollTo(0, 2000);
   }
 
   window.addEventListener('scroll', function(ev) {
-    console.log(window.scrollY);
-    if (window.scrollY >= 420) {
-      document.getElementById("navbar").classList.add("sticky-top");
-    }
-    if (window.scrollY <= 400) {
-      document.getElementById("navbar").classList.remove("sticky-top");
+    let scroll = window.scrollY;
+    // Removes or adds the sticky-top class, depending on scroll distance
+    // if (scroll >= 420) {
+    //   document.getElementById("navbar").classList.add("sticky-top");
+    // }
+    // if (scroll <= 400) {
+    //   document.getElementById("navbar").classList.remove("sticky-top");
+    // }
+
+    // Switches which nav element is active
+    if (scroll <= 400) {
+      setHomeActive(true);
+      setServicesActive(false);
+      setAboutActive(false);
+      setScheduleActive(false);
+      setContactActive(false);
+    } else if (scroll > 400 && scroll < 900) {
+      setHomeActive(false);
+      setServicesActive(true);
+      setAboutActive(false);
+      setScheduleActive(false);
+      setContactActive(false);
+    } else if (scroll > 900 && scroll < 1400) {
+      setHomeActive(false);
+      setServicesActive(false);
+      setAboutActive(true);
+      setScheduleActive(false);
+      setContactActive(false);
+    } else if (scroll > 1400 && scroll < 1700) {
+      setHomeActive(false);
+      setServicesActive(false);
+      setAboutActive(false);
+      setScheduleActive(true);
+      setContactActive(false);
+    } else if (scroll > 1700) {
+      setHomeActive(false);
+      setServicesActive(false);
+      setAboutActive(false);
+      setScheduleActive(false);
+      setContactActive(true);
     }
   });
 
   return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" id='navbar'>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id='navbar'>
         <div class="container-fluid">
           <a class="navbar-brand" href="#" onClick={handleSelectHome} draggable={false}><span id='sh-logo'>SH</span> Compliance & Service Consulting</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
