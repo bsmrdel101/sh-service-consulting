@@ -36,12 +36,12 @@ function Nav() {
   window.addEventListener('scroll', function(ev) {
     let scroll = window.scrollY;
     // Removes or adds the sticky-top class, depending on scroll distance
-    if (scroll >= 420) {
-      document.getElementById("navbar").classList.add("sticky-top");
-    }
-    if (scroll <= 400) {
-      document.getElementById("navbar").classList.remove("sticky-top");
-    }
+    // if (scroll >= 420) {
+    //   document.getElementById("navbar").classList.add("sticky-top");
+    // }
+    // if (scroll <= 400) {
+    //   document.getElementById("navbar").classList.remove("sticky-top");
+    // }
 
     // Switches which nav element is active
     if (scroll <= 400) {
@@ -50,19 +50,25 @@ function Nav() {
       setAboutActive(false);
       setScheduleActive(false);
       setContactActive(false);
-    } else if (scroll > 400 && scroll < 1000) {
+    } else if (scroll > 400 && scroll < 700) {
       setHomeActive(false);
       setServicesActive(true);
       setAboutActive(false);
       setScheduleActive(false);
       setContactActive(false);
-    } else if (scroll > 1000 && scroll < 1500) {
+    } else if (scroll > 700 && scroll < 1500) {
       setHomeActive(false);
       setServicesActive(false);
       setAboutActive(true);
       setScheduleActive(false);
       setContactActive(false);
-    } else if (scroll > 1500 && scroll < 5000) {
+    } else if (scroll > 1000 && scroll < 2000) {
+      setHomeActive(false);
+      setServicesActive(false);
+      setAboutActive(false);
+      setScheduleActive(true);
+      setContactActive(false);
+    } else if (scroll > 1000 && scroll < 2000) {
       setHomeActive(false);
       setServicesActive(false);
       setAboutActive(false);
@@ -92,7 +98,7 @@ function Nav() {
   });
 
   return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" id='navbar'>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id='navbar'>
         <div class="container-fluid">
           <a class="navbar-brand" href="#" onClick={handleSelectHome} draggable={false}><span id='sh-logo'>SH</span> Compliance & Service Consulting</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
