@@ -50,51 +50,31 @@ function Nav() {
       setAboutActive(false);
       setScheduleActive(false);
       setContactActive(false);
-    } else if (scroll > 400 && scroll < 700) {
+    } else if (scroll > 400 && scroll < 900) {
       setHomeActive(false);
       setServicesActive(true);
       setAboutActive(false);
       setScheduleActive(false);
       setContactActive(false);
-    } else if (scroll > 700 && scroll < 1500) {
+    } else if (scroll > 900 && scroll < 1400) {
       setHomeActive(false);
       setServicesActive(false);
       setAboutActive(true);
       setScheduleActive(false);
       setContactActive(false);
-    } else if (scroll > 1000 && scroll < 2000) {
+    } else if (scroll > 1400 && scroll < 1700) {
       setHomeActive(false);
       setServicesActive(false);
       setAboutActive(false);
       setScheduleActive(true);
       setContactActive(false);
-    } else if (scroll > 1000 && scroll < 2000) {
+    } else if (scroll > 1700) {
       setHomeActive(false);
       setServicesActive(false);
       setAboutActive(false);
-      setScheduleActive(true);
-      setContactActive(false);
+      setScheduleActive(false);
+      setContactActive(true);
     }
-
-    // switch (scroll) {
-    //   case 0:
-    //     getActiveNav("home");
-    //     break;
-    //   case 470:
-    //     getActiveNav("services");
-    //     break;
-    //   case 1150:
-    //     getActiveNav("about");
-    //     break;
-    //   case 1500:
-    //     getActiveNav("schedule");
-    //     break;
-    //   case 2000:
-    //     getActiveNav("contact");
-    //     break;
-    //   default:
-    //     break;
-    // }
   });
 
   return (
