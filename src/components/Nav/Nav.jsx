@@ -14,80 +14,23 @@ function Nav() {
   const [contactActive, setContactActive] = useState(false);
 
   const handleSelectHome = () => {
-    setAboutActive(false);
-    setHomeActive(true);
-    setContactActive(false);
-    setServicesActive(false);
-    setScheduleActive(false);
-
     window.scrollTo(0, 0);
   }
 
   const handleSelectServices = () => {
-    setAboutActive(false);
-    setHomeActive(false);
-    setContactActive(false);
-    setServicesActive(true);
-    setScheduleActive(false);
-
     window.scrollTo(0, 470);
   }
 
   const handleSelectAbout = () => {
-    setAboutActive(true);
-    setHomeActive(false);
-    setContactActive(false);
-    setServicesActive(false);
-    setScheduleActive(false);
-
     window.scrollTo(0, 1150);
   }
 
   const handleSelectSchedule = () => {
-    setAboutActive(false);
-    setHomeActive(false);
-    setContactActive(false);
-    setServicesActive(false);
-    setScheduleActive(true);
-
     window.scrollTo(0, 1500);
   }
 
   const handleSelectContact = () => {
-    setAboutActive(false);
-    setHomeActive(false);
-    setContactActive(true);
-    setServicesActive(false);
-    setScheduleActive(false);
-
     window.scrollTo(0, 2000);
-  }
-
-  const getActiveNav = (nav) => {
-    setAboutActive(false);
-    setHomeActive(false);
-    setContactActive(false);
-    setServicesActive(false);
-    setScheduleActive(false);
-    switch (nav) {
-      case "home":
-        setHomeActive(true);
-        break;
-      case "services":
-        setServicesActive(true);
-        break;
-      case "about":
-        setAboutActive(true);
-        break;
-      case "contact":
-        setContactActive(true);
-        break;
-      case "schedule":
-        setScheduleActive(true);
-        break;
-      default:
-        break;
-    }
   }
 
   window.addEventListener('scroll', function(ev) {
@@ -107,11 +50,23 @@ function Nav() {
       setAboutActive(false);
       setScheduleActive(false);
       setContactActive(false);
-    } else if (scroll > 400 && scroll < 470) {
+    } else if (scroll > 400 && scroll < 1000) {
       setHomeActive(false);
       setServicesActive(true);
       setAboutActive(false);
       setScheduleActive(false);
+      setContactActive(false);
+    } else if (scroll > 1000 && scroll < 1500) {
+      setHomeActive(false);
+      setServicesActive(false);
+      setAboutActive(true);
+      setScheduleActive(false);
+      setContactActive(false);
+    } else if (scroll > 1500 && scroll < 5000) {
+      setHomeActive(false);
+      setServicesActive(false);
+      setAboutActive(false);
+      setScheduleActive(true);
       setContactActive(false);
     }
 
