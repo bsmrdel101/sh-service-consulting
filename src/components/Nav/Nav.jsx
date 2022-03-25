@@ -63,13 +63,61 @@ function Nav() {
     window.scrollTo(0, 2000);
   }
 
+  const getActiveNav = (nav) => {
+    setAboutActive(false);
+    setHomeActive(false);
+    setContactActive(false);
+    setServicesActive(false);
+    setScheduleActive(false);
+    switch (nav) {
+      case "home":
+        setHomeActive(true);
+        break;
+      case "services":
+        setServicesActive(true);
+        break;
+      case "about":
+        setAboutActive(true);
+        break;
+      case "contact":
+        setContactActive(true);
+        break;
+      case "schedule":
+        setScheduleActive(true);
+        break;
+      default:
+        break;
+    }
+  }
+
   window.addEventListener('scroll', function(ev) {
-    console.log(window.scrollY);
+    // Removes or adds the sticky-top class, depending on scroll distance
     if (window.scrollY >= 420) {
       document.getElementById("navbar").classList.add("sticky-top");
     }
     if (window.scrollY <= 400) {
       document.getElementById("navbar").classList.remove("sticky-top");
+    }
+
+    // Switches which nav element is active
+    switch (window.scrollY) {
+      case 0:
+        getActiveNav("home");
+        break;
+      case 470:
+        getActiveNav("services");
+        break;
+      case 1150:
+        getActiveNav("about");
+        break;
+      case 1500:
+        getActiveNav("schedule");
+        break;
+      case 2000:
+        getActiveNav("contact");
+        break;
+      default:
+        break;
     }
   });
 
