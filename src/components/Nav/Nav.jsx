@@ -30,7 +30,7 @@ function Nav() {
   }
 
   const handleSelectContact = () => {
-    window.scrollTo(0, 2000);
+    window.scrollTo(0, 3000);
   }
 
   window.addEventListener('scroll', function(ev) {
