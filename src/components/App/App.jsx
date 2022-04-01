@@ -9,7 +9,9 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 
 import Nav from '../Nav/Nav';
+
 import HomePage from '../HomePage/HomePage';
+
 import './App.css';
 
 function App() {
