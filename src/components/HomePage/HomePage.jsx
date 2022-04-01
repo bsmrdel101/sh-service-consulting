@@ -16,7 +16,7 @@ function HomePage() {
                 <About />
             </section>
             <ScheduleForm />
-            <section className='contact-container'>
+            <section className='contact-container'> 
                 <Contact />
             </section>
         </>
