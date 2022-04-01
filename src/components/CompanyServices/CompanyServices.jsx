@@ -16,7 +16,7 @@ function CompanyServices() {
                             <li>We can collaborate with you to develop, implement, and maintain your Quality Management System for compliance to global regulatory requirements.</li>
                             <li>Quality System Development and Creation of Applicable Procedures</li>
                             <li>Quality System Auditing under the following requirements:</li>
-                            <ul>
+                            <ul className='secondary-list'>
                                 <li>ISO 13485:2016</li>
                                 <li>FDA Quality System Regulations (QSR)</li>
                                 <li>MDSAP (Australia, Brazil, Canada, United States, Japan)</li>

@@ -16,6 +16,10 @@
     text-align: center;
 }
 
+.secondary-list {
+    list-style: circle;
+}
+
 /* .services-btn {
     border: none;
     border-radius: 10px;

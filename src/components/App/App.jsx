@@ -9,12 +9,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 
 import Nav from '../Nav/Nav';
-import Footer from '../Footer/Footer';
-
-import AboutPage from '../AboutPage/AboutPage';
 import HomePage from '../HomePage/HomePage';
-import ContactPage from '../ContactPage/ContactPage';
-
 import './App.css';
 
 function App() {
