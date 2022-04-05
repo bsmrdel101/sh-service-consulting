@@ -35,14 +35,7 @@ function Nav() {
 
   window.addEventListener('scroll', function(ev) {
     let scroll = window.scrollY;
-    // Removes or adds the sticky-top class, depending on scroll distance
-    // if (scroll >= 420) {
-    //   document.getElementById("navbar").classList.add("sticky-top");
-    // }
-    // if (scroll <= 400) {
-    //   document.getElementById("navbar").classList.remove("sticky-top");
-    // }
-
+    
     // Switches which nav element is active
     if (scroll <= 400) {
       setHomeActive(true);
