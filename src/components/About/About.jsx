@@ -4,7 +4,7 @@ import './About.css';
 
 function About() {
     return (
-        <>
+        <div>
             <center>
                 <h1 className='services-title'>About us</h1>
             </center>
@@ -18,7 +18,7 @@ function About() {
                     We can do our service in English or Spanish.
                 </p>
             </div>
-        </>
+        </div>
     );
 }
 
