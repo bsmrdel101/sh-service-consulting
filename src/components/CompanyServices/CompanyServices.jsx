@@ -20,6 +20,7 @@ function CompanyServices() {
                                 <li>ISO 13485:2016</li>
                                 <li>FDA Quality System Regulations (QSR)</li>
                                 <li>MDSAP (Australia, Brazil, Canada, United States, Japan)</li>
+                                <li>EUMDR 2017/745</li>
                             </ul>
                         </ul>
                     </div>
