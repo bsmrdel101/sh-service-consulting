@@ -2,12 +2,12 @@
 
 ## Description
 
-This consulting company commisioned me to build them a website to show off their buisness to clients. It displays their services, contact, about sections, and a form to schedule a consultation(Which will send an email with the meeting details).
+This consulting company commissioned me to build them a website to show off their business to clients. It displays their services, contact, about sections, and a form to schedule a consultation(Which will send an email with the meeting details).
 
 ## Screen Shots
-![pic_1]()
+![pic_1](public/service_consulting_pic_1.png)
 
-![pic_2]()
+![pic_2](public/service_consulting_pic_2.png)
 
 ## Getting Started
 
