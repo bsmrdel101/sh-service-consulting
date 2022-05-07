@@ -45,3 +45,7 @@
     border-bottom: 3px solid orange;
     padding-bottom: 3px;
 }
+
+.form-submit-notif {
+    color: rgb(49, 183, 49);
+}

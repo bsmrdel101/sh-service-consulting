@@ -10,9 +10,11 @@ function ScheduleForm() {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [description, setDescription] = useState('');
+    const [emailSent, setEmailSent] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setEmailSent(true);
         let emailParams = {
             name: name,
             email: email,
@@ -64,6 +66,9 @@ function ScheduleForm() {
                 />
 
                 <center>
+                    {emailSent &&
+                        <h5 className='form-submit-notif'>Request sent</h5>
+                    }
                     <button type='submit' className='form-submit'>Submit</button>
                 </center>
             </form>
